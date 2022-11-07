@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 // Actions
-const LOAD = 'bookstore/widgets/LOAD';
-const CREATE = 'bookstore/widgets/CREATE';
-const UPDATE = 'bookstore/widgets/UPDATE';
-const REMOVE = 'bookstore/widgets/REMOVE';
+const LOAD = 'bookstore/books/LOAD';
+const CREATE = 'bookstore/books/CREATE';
+const UPDATE = 'bookstore/books/UPDATE';
+const REMOVE = 'bookstore/books/REMOVE';
 
 // Reducer
 export default bookReducer = (state = { booklist: [] }, action = {}) => {
@@ -20,14 +20,14 @@ export default bookReducer = (state = { booklist: [] }, action = {}) => {
 };
 
 // Action Creators
-export const loadWidgets = () => ({ type: LOAD });
+export const loadbooks = () => ({ type: LOAD });
 
-export const createWidget = (widget) => ({ type: CREATE, widget });
+export const createbook = (book) => ({ type: CREATE, book });
 
-export const updateWidget = (widget) => ({ type: UPDATE, widget });
+export const updatebook = (book) => ({ type: UPDATE, book });
 
-export const removeWidget = (widget) => ({ type: REMOVE, widget });
+export const removebook = (book) => ({ type: REMOVE, book });
 
 // side effects, only as applicable
 // e.g. thunks, epics, etc
-export const getWidget = () => (dispatch) => get('/widget').then((widget) => dispatch(updateWidget(widget)));
+export const getbook = () => (dispatch) => get('/book').then((book) => dispatch(updatebook(book)));

@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 // Actions
-const LOAD = 'bookstore/widgets/LOAD';
-const CREATE = 'bookstore/widgets/CREATE';
-const UPDATE = 'bookstore/widgets/UPDATE';
-const REMOVE = 'bookstore/widgets/REMOVE';
-const CHECK_STATUS = 'bookstore/widgets/CHECK_STATUS';
+const LOAD = 'bookstore/categories/LOAD';
+const CREATE = 'bookstore/categories/CREATE';
+const UPDATE = 'bookstore/categories/UPDATE';
+const REMOVE = 'bookstore/categories/REMOVE';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 // Reducer
 export default categoryReducer = (state = { categories: [], status: 'Completed' }, action = {}) => {
@@ -21,16 +21,16 @@ export default categoryReducer = (state = { categories: [], status: 'Completed' 
 };
 
 // Action Creators
-export const loadWidgets = () => ({ type: LOAD });
+export const loadcategories = () => ({ type: LOAD });
 
-export const createWidget = (widget) => ({ type: CREATE, widget });
+export const createcategory = (category) => ({ type: CREATE, category });
 
-export const updateWidget = (widget) => ({ type: UPDATE, widget });
+export const updatecategory = (category) => ({ type: UPDATE, category });
 
-export const removeWidget = (widget) => ({ type: REMOVE, widget });
+export const removecategory = (category) => ({ type: REMOVE, category });
 
-export const checkWidget = (widget) => ({ type: CHECK_STATUS, widget });
+export const checkcategory = (category) => ({ type: CHECK_STATUS, category });
 
 // side effects, only as applicable
 // e.g. thunks, epics, etc
-export const getWidget = () => (dispatch) => get('/widget').then((widget) => dispatch(updateWidget(widget)));
+export const getcategory = () => (dispatch) => get('/category').then((category) => dispatch(updatecategory(category)));
