@@ -8,7 +8,6 @@ import Button from './Buttons';
 const Book = (props) => {
   const { id, title, author } = props.book;
   useEffect(() => () => {
-    console.log('Cleaning up...');
   }, []);
   return (
     <div>
