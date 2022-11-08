@@ -13,9 +13,7 @@ export default categoryReducer = (state = { categories: [], status: 'Completed' 
     case CREATE: return {
       categories: [...state.categories, action.payload],
     };
-    case CHECK_STATUS: return {
-      status: 'Under construction',
-    };
+    case CHECK_STATUS: return { ...state, status: 'Under construction' };
     default: return state;
   }
 };

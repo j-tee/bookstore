@@ -13,7 +13,7 @@ export default bookReducer = (state = { booklist: [] }, action = {}) => {
       booklist: [...state.booklist, action.payload],
     };
     case REMOVE: return {
-      booklist: state.booklist.filter((book) => book.id !== action.payload.id),
+      booklist: [...state.booklist].filter((book) => book.id !== action.payload.id),
     };
     default: return state;
   }
