@@ -1,25 +1,15 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable implicit-arrow-linebreak */
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import BookList from './BookList';
 
 const Home = () => {
-  const booklist = [
-    {
-      id: 1,
-      title: 'Lord of the rings',
-      author: 'TeeJay',
-    },
-    {
-      id: 2,
-      title: 'Harry Potter',
-      author: 'Peter Rawlings',
-    },
-  ];
-  const [books, setBooks] = useState(booklist);
+  const { booklist } = useSelector((state) => state.booklist);
+  // const dispatch = useDispatch();
   return (
     <>
-      <BookList books={books} />
+      <BookList books={booklist} />
     </>
   );
 };
