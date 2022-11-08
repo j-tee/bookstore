@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
+# Book Store
 
 > A react application that provides basic calculator functionalities
 
@@ -9,6 +9,7 @@
 
 - HTML 5 / Css 3
 - Javascript
+- React
 
 ### Prerequisites
 
@@ -25,7 +26,7 @@
 - If it suits you, on your local computer, create a directory in your preferred location (e.g in the Desktop or Document directory)
 
 ### Install
-- To clone the project on your machine: Type `git clone https://github.com/j-tee/my-calculato.git` if your're using https with git or `git@github.com:j-tee/my-calculator.git` if you prefer ssh and hit enter.
+- To clone the project on your machine: Type `git clone https://github.com/j-tee/bookstore.git` if your're using https with git or `git@github.com:j-tee/bookstore.git` if you prefer ssh and hit enter.
 - To install webpack and project dependencies _(a packet manager is required)_:
 `npm install`
 - To build project files in development mode _(the destination folder is /dist)_:
