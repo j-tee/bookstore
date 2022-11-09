@@ -5,6 +5,7 @@ const AddInput = (props) => (
     type={props.type}
     id={props.id}
     name={props.name}
+    placeholder={props.placeholder}
   />
 );
 

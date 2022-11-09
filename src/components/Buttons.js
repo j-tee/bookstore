@@ -6,7 +6,7 @@ const Button = (props) => (
   <button
     id={props.id}
     className={props.className}
-    onClick={props.handleChange}
+    onClick={props.handleClickEvent}
     name={props.name}
     type={props.type}
   >
