@@ -1,10 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
-/* eslint-disable no-alert */
-/* eslint-disable no-unused-expressions */
-
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { createbook } from '../redux/book/books';
