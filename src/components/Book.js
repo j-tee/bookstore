@@ -1,25 +1,20 @@
-/* eslint-disable no-console */
-/* eslint-disable react/destructuring-assignment */
-
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from './Buttons';
 import { removebook } from '../redux/book/books';
 
 const Book = (props) => {
-  const { id, title, author } = props.book;
+  const { apikey } = useSelector((state) => state.apikey);
+  const { book } = props;
   const dispatch = useDispatch();
   const removeBook = (book) => {
-    dispatch(removebook(book));
+    dispatch(removebook(book, apikey));
   };
-  useEffect(() => () => {
-  }, [dispatch]);
   return (
     <div>
-      {title}
-      {author}
-      <Button id={id} handleClickEvent={() => removeBook(props.book)} name="Remove" />
+      {book.title}
+      {book.author}
+      <Button id={book.id} handleClickEvent={() => removeBook(book)} name="Remove" />
     </div>
   );
 };

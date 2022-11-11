@@ -1,23 +1,34 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 /* eslint-disable react/button-has-type */
-const Button = (props) => (
-  <button
-    id={props.id}
-    className={props.className}
-    onClick={props.handleClickEvent}
-    name={props.name}
-    type={props.type}
-  >
-    {props.name}
-  </button>
-);
+import PropTypes from 'prop-types';
 
+const Button = (props) => {
+  const {
+    id, className, handleClickEvent, name, type,
+  } = props;
+  return (
+    <button
+      id={id}
+      className={className}
+      onClick={handleClickEvent}
+      name={name}
+      type={type}
+    >
+      {name}
+    </button>
+  );
+};
+Button.propTypes = {
+  type: PropTypes.string,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  className: PropTypes.string,
+  handleClickEvent: PropTypes.func.isRequired,
+};
 Button.defaultProps = {
   type: 'button',
-
-  disabled: false,
+  id: '',
+  name: '',
+  className: '',
 };
 
 export default Button;
