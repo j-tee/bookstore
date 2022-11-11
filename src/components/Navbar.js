@@ -6,17 +6,17 @@ const Navbar = () => {
     {
       id: 1,
       path: '/',
-      text: 'Books',
+      text: 'BOOKS',
     },
     {
       id: 2,
       path: '/category',
-      text: 'Categories',
+      text: 'CATEGORIES',
     },
   ];
   return (
-    <nav className="navBar">
-      <span className="title">Book Store</span>
+    <nav className="navbar">
+      <span className="title-cms">Book Store CMS</span>
       <ul>
         {links.map((link) => (
           <li key={link.id}>

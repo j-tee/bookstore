@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { useEffect } from 'react';
 import { createbook, loadbooks } from '../redux/book/books';
 import Book from './Book';
-import Button from './Buttons';
 import BookForm from './form';
 import { getapikey } from '../redux/setup/setup';
 
@@ -24,16 +23,15 @@ const BookList = () => {
     dispatch(createbook(book, apikey));
   };
   return (
-    <div>
-      <h3>List of Books</h3>
+    <div className="panels">
       {booklist.map((book) => (
         <Book
           key={book.id}
           book={book}
         />
       ))}
-      <BookForm />
-      <Button id="add-book" handleClickEvent={() => addBook()} name="Add New Book" className="btn-add" />
+      <div className="horizontal-divider" />
+      <BookForm addBook={addBook} />
     </div>
   );
 };

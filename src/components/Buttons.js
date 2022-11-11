@@ -22,13 +22,14 @@ Button.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   className: PropTypes.string,
-  handleClickEvent: PropTypes.func.isRequired,
+  handleClickEvent: PropTypes.func,
 };
 Button.defaultProps = {
   type: 'button',
   id: '',
   name: '',
   className: '',
+  handleClickEvent: null,
 };
 
 export default Button;

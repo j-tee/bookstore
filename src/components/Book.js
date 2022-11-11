@@ -11,10 +11,25 @@ const Book = (props) => {
     dispatch(removebook(book, apikey));
   };
   return (
-    <div>
-      {book.title}
-      {book.author}
-      <Button id={book.id} handleClickEvent={() => removeBook(book)} name="Remove" />
+    <div className="display-panel">
+      <div>
+        <div className="cat-name">{book.category}</div>
+        <div className="book-title">{book.title}</div>
+        <div className="auth-name">{book.author}</div>
+        <ul className="book-tags">
+          <li><Button className="book-tags-button" id={book.id} name="Comments" /></li>
+          <li><Button className="book-tags-button" id={book.id} handleClickEvent={() => removeBook(book)} name="Remove" /></li>
+          <li><Button className="book-tags-button" id={book.id} name="Edit" /></li>
+        </ul>
+      </div>
+      <div className="progress">
+        <div className="circular-progress-container">
+          <div className=".circular-progress" />
+        </div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+      </div>
     </div>
   );
 };
@@ -24,6 +39,7 @@ Book.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
