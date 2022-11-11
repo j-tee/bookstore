@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
-// import { objectTraps } from 'immer/dist/internal';
 import {
   CREATE, LOAD, REMOVE, UPDATE,
 } from '../types';
@@ -56,7 +53,6 @@ export const createbook = (book, apikey) => async (dispatch) => {
     dispatch({ type: CREATE, payload: book });
     return Promise.resolve(res.data);
   } catch (error) {
-    console.log(error);
     return Promise.reject(error);
   }
 };
@@ -69,11 +65,6 @@ export const removebook = (book, apikey) => async (dispatch) => {
     dispatch({ type: REMOVE, payload: book });
     return Promise.resolve(res.data);
   } catch (error) {
-    console.log(error);
     return Promise.reject(error);
   }
 };
-
-// side effects, only as applicable
-// e.g. thunks, epics, etc
-export const getbook = () => (dispatch) => get('/book').then((book) => dispatch(updatebook(book)));
