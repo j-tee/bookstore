@@ -271,6 +271,6 @@ form {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  border-left: 2px solid #fafafa;
+  border-left: 2px solid #f6f6f6;
   padding-left: 4rem;
 }
