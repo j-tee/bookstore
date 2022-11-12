@@ -20,7 +20,7 @@ const BookForm = (props) => {
           type="text"
           className="form-input"
         />
-        <Button id="add-book" handleClickEvent={addBook} name="ADD BOOK" className="btn-add" />
+        <Button id="add-book" handleClickEvent={addBook} name="ADD BOOK" className="btn-book" />
       </form>
     </div>
   );

@@ -14,7 +14,7 @@ const BookList = () => {
     dispatch(getapikey(apikey));
     dispatch(loadbooks(apikey));
   }, [apikey, dispatch]);
-
+  let percentage = 30;
   const addBook = () => {
     const form = document.querySelector('form');
     const data = Object.fromEntries(new FormData(form).entries());
@@ -24,12 +24,16 @@ const BookList = () => {
   };
   return (
     <div className="panels">
-      {booklist.map((book) => (
-        <Book
-          key={book.id}
-          book={book}
-        />
-      ))}
+      {booklist.map((book) => {
+        percentage += 5;
+        return (
+          <Book
+            key={book.id}
+            book={book}
+            percentage={percentage}
+          />
+        );
+      })}
       <div className="horizontal-divider" />
       <BookForm addBook={addBook} />
     </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/fontawesome-free-solid';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -16,16 +18,19 @@ const Navbar = () => {
   ];
   return (
     <nav className="navbar">
-      <span className="title-cms">Book Store CMS</span>
-      <ul>
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.path} activeclassname="active-link">
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+      <div className="nav-link">
+        <div className="title-cms">Book Store CMS</div>
+        <ul>
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavLink to={link.path} activeclassname="active-link">
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <FontAwesomeIcon icon={faUser} color="blue" />
     </nav>
   );
 };
