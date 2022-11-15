@@ -18,7 +18,7 @@
 - Have a browser install on the Computer
 
 ### Demo and Documentation
-[Live Demo](https://j-tee.github.io/bookstore/dist/)
+[Live Demo](https://j-tee.github.io/bookstore/public/index.html)
 - [Project Documentation Link](https://drive.google.com)
 
 ### Setup
