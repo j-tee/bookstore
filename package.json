@@ -2,7 +2,7 @@
   "name": "bookstore",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://j-tee.github.io/bookstore",
+  "homepage":"https://j-tee.github.io/bookstore",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
