@@ -18,8 +18,8 @@
 - Have a browser install on the Computer
 
 ### Demo and Documentation
-<!-- - [Live Demo](https://j-tee.github.io/my-calculator/dist/)
-- [Project Documentation Link](https://drive.google.com) -->
+[Live Demo](https://j-tee.github.io/bookstore/dist/)
+- [Project Documentation Link](https://drive.google.com)
 
 ### Setup
 
