@@ -2,7 +2,7 @@ import BookService from '../../services/bookService';
 
 const GET_API_KEY = 'bookstore/categories/GET_API_KEY';
 
-const appkey = localStorage.getItem('apikey');
+const appkey = 'QCKhl0FzLBumZ0Cf4eoG';
 // Reducer
 export const setupReducer = (state = { apikey: appkey }, action = { type: null, payload: '' }) => {
   switch (action.type) {
